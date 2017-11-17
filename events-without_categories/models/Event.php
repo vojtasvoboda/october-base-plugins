@@ -77,7 +77,7 @@ class Event extends Model
         $now = Argon::now();
 
         if ($this->date_to === null) {
-            return $this->date_to->format('Y-m-d') === $now->format('Y-m-d');
+            return $this->date_from->format('Y-m-d') === $now->format('Y-m-d');
         }
 
         return $this->date_from <= $now && $this->date_to >= $now;
