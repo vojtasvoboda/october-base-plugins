@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Partner
+
+# Model Form Field configuration
+form: $/site/partners/models/partner/fields.yaml
+
+# Model Class name
+modelClass: Site\Partners\Models\Partner
+
+# Default redirect location
+defaultRedirect: site/partners/partners
+
+# Create page
+create:
+    title: Create Partner
+    redirect: site/partners/partners/update/:id
+    redirectClose: site/partners/partners
+
+# Update page
+update:
+    title: Edit Partner
+    redirect: site/partners/partners
+    redirectClose: site/partners/partners
+
+# Preview page
+preview:
+    title: Preview Partner

@@ -1,0 +1,38 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    category:
+        label: Category
+        span: full
+        type: relation
+        required: true
+    name:
+        label: Name
+        required: true
+        span: left
+    url:
+        label: URL
+        span: right
+        required: true
+    enabled:
+        label: Enabled
+        type: checkbox
+        default: true
+    description:
+        label: Description
+        type: textarea
+        size: medium
+    image:
+        label: Image
+        mode: image
+        imageWidth: 300
+        imageHeight: 300
+        useCaption: true
+        thumbOptions:
+            mode: auto
+            extension: auto
+        required: 1
+        type: fileupload
+        commentAbove: 'Photo dimensions will be updated automatically'

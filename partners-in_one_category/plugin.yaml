@@ -1,0 +1,10 @@
+plugin:
+    name: 'Partners'
+    description: 'Partners management'
+    author: 'Vojta Svoboda'
+    icon: icon-users
+    homepage: ''
+permissions:
+    site.partners.*:
+        tab: 'Partners'
+        label: 'Partners management'

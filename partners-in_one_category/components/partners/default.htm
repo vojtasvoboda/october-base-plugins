@@ -1,0 +1,28 @@
+{% set partners = __SELF__.partners %}
+
+<div class="logos">
+    {% for partner in partners %}
+    {% if loop.index % 6 == 1 %}
+    <div class="row">
+    {% endif %}
+        <div class="item">
+            {% if partner.url %}
+            <a href="{{ partner.url }}" target="_blank">
+            {% endif %}
+                {% if partner.image.count %}
+                    <img
+                        src="{{ partner.image.getThumb(300, 200, 'crop') }}"
+                        title="{{ partner.description }}"
+                        alt="{{ partner.description }}" />
+                {% else %}
+                    {{ partner.name }}
+                {% endif %}
+            {% if partner.url %}
+            </a>
+            {% endif %}
+        </div>
+    {% if loop.index % 6 == 0 or loop.last %}
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>

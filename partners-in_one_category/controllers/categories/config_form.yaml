@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Category
+
+# Model Form Field configuration
+form: $/site/partners/models/category/fields.yaml
+
+# Model Class name
+modelClass: Site\Partners\Models\Category
+
+# Default redirect location
+defaultRedirect: site/partners/categories
+
+# Create page
+create:
+    title: Create Category
+    redirect: site/partners/categories/update/:id
+    redirectClose: site/partners/categories
+
+# Update page
+update:
+    title: Edit Category
+    redirect: site/partners/categories
+    redirectClose: site/partners/categories
+
+# Preview page
+preview:
+    title: Preview Category

@@ -1,0 +1,23 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        required: true
+        span: left
+    slug:
+        label: Slug
+        span: right
+        required: true
+        preset:
+            field: name
+            type: slug
+    enabled:
+        label: Enabled
+        type: checkbox
+        default: true
+    description:
+        label: Description
+        type: textarea

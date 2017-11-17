@@ -1,0 +1,5 @@
+title: Categories
+modelClass: Site\Partners\Models\Category
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,6 @@
+1.0.0:
+  - First version of Partners
+  - create_categories_table.php
+  - create_partners_table.php
+  - seed_categories_table.php
+  - seed_partners_table.php

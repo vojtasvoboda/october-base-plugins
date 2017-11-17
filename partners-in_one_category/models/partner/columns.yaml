@@ -1,0 +1,36 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: Name
+        searchable: true
+        sortable: true
+    category:
+        relation: category
+        select: name
+    url:
+        label: URL
+        searchable: true
+        sortable: true
+    description:
+        label: Description
+        searchable: true
+    sort_order:
+        label: Sort order
+        sortable: true
+    enabled:
+        label: Enabled
+        type: switch
+        sortable: true
+    created_at:
+        label: Created
+        type: datetime
+        sortable: true
+        format: d.m.Y H:i:s
+    updated_at:
+        label: Updated
+        type: datetime
+        sortable: true
+        format: d.m.Y H:i:s
