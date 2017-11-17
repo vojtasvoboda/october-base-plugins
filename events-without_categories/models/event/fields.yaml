@@ -1,0 +1,37 @@
+fields:
+    name:
+        label: Name
+        type: text
+        span: left
+    slug:
+        label: Slug
+        span: right
+        required: true
+        preset:
+            field: name
+            type: slug
+    date_from:
+        label: From
+        span: left
+        type: datepicker
+        mode: date
+    date_to:
+        label: To
+        span: right
+        type: datepicker
+        mode: date
+    description:
+        label: Popis
+        type: richeditor
+        size: small
+    youtube_video_code:
+        label: YouTube video code
+        comment: "For example: hSe95yskUoI"
+    enabled:
+        label: Zobrazit
+        span: full
+        type: checkbox
+    top:
+        label: Top
+        span: full
+        type: checkbox

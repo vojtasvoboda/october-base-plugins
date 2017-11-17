@@ -1,0 +1,26 @@
+{% set events = __SELF__.events %}
+
+{% for event in events %}
+<div class="item">
+
+    <h3>
+        {% if event.date_to and (event.date_from != event.date_to) %}
+            {{ event.date_from | date('d. m.') }} - {{ event.date_to | date('d. m. Y') }}
+        {% else %}
+            {{ event.date_from | date('d. m. Y') }}
+        {% endif %}
+    </h3>
+    <div class="text">
+        {{ event.description | raw }}
+    </div>
+
+    {% if event.youtube_video_code %}
+    <div class="video">
+        <div class="embed-container">
+            <iframe src="https://www.youtube.com/embed/{{ event.youtube_video_code }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    {% endif %}
+
+</div>
+{% endfor %}

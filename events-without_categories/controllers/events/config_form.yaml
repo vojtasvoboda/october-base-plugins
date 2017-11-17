@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Event
+
+# Model Form Field configuration
+form: $/site/events/models/event/fields.yaml
+
+# Model Class name
+modelClass: Site\Events\Models\Event
+
+# Default redirect location
+defaultRedirect: site/events/events
+
+# Create page
+create:
+    title: Create Event
+    redirect: site/events/events/update/:id
+    redirectClose: site/events/events
+
+# Update page
+update:
+    title: Edit Event
+    redirect: site/events/events
+    redirectClose: site/events/events
+
+# Preview page
+preview:
+    title: Preview Event
