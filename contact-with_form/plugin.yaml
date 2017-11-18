@@ -1,0 +1,5 @@
+plugin:
+    name: 'Kontaktní formulář'
+    description: 'Zprávy z kontaktního formuláře'
+    author: 'Vojta Svoboda'
+    icon: oc-icon-phone

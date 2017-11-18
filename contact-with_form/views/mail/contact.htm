@@ -1,0 +1,18 @@
+subject = "Zpráva z kontaktního formuláře"
+layout = "default"
+==
+<p>
+    Dobrý den,<br />
+    <br />
+    z kontaktního formuláře na stránkách {{ stranky }} byl zaslán tento obsah:<br />
+    <br />
+    Jméno: {{ zprava.name }}<br />
+    E-mail: {{ zprava.email }}<br />
+    Telefon: {{ zprava.phone }}<br />
+    Firma: {{ zprava.company }}<br />
+    Text: {{ zprava.message }}<br />
+    <br />
+    Lokalizace: {{ zprava.locale }}<br />
+    <br />
+    Tak se brzy ozvěte :-)
+</p>

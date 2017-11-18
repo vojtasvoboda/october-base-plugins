@@ -2,6 +2,10 @@
 
 Collection of base plugins for OctoberCMS.
 
+## Contacts
+
+- Contact with form - contact form with mailer.
+
 ## Events
 
 - Without any category - events, date from, date to.

@@ -1,0 +1,63 @@
+{% put scripts %}
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $("input#confirm").val('se' + 'cret');
+        $(".confirmation").hide();
+    });
+</script>
+{% endput %}
+
+<form
+        id="{{ __SELF__ }}"
+        action="#{{ __SELF__ }}"
+        method="post"
+        data-request="{{ __SELF__ }}::onSubmit"
+        data-request-update="'{{ __SELF__ }}::success': '#result'"
+        data-request-success="$('#{{ __SELF__ }} input[type=text], #{{ __SELF__ }} textarea').val('');"
+        data-request-error="$('#{{ __SELF__ }} #error').text(jqXHR.responseJSON);"
+        {% if sent %} class="sent"{% endif %}>
+    <div class="row">
+        <div class="input-wrap">
+            <input id="name" name="name" type="text" placeholder="{{ 'Name and surname' | _ }}*" onfocus="this.placeholder=''" onblur='this.placeholder="{{ 'Name and surname' | _ }}*"' value="{{ post.name }}" />
+        </div>
+        <div class="input-wrap">
+            <input id="email" name="email" type="text" placeholder="{{ 'Email' | _ }}*" onfocus="this.placeholder=''" onblur="this.placeholder='{{ 'Email' | _ }}*'" value="{{ post.phone }}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-wrap">
+            <input id="phone" name="phone" type="text" placeholder="{{ 'Phone number' | _ }}" onfocus="this.placeholder=''" onblur="this.placeholder='{{ 'Phone number' | _ }}'" value="{{ post.phone }}">
+        </div>
+        <div class="input-wrap">
+            <input id="company" name="company" type="text" placeholder="{{ 'Company' | _ }}" onfocus="this.placeholder=''" onblur="this.placeholder='{{ 'Company' | _ }}*'" value="{{ post.company }}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-wrap textarea-wrap confirmation" style="margin: 0 0 30px 0;">
+            <input id="confirm" name="confirm" placeholder="{{ 'Confirmation - type secret word' | _ }}*" value="{{ post.confirm }}" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="textarea-wrap">
+            <textarea id="message" name="message" placeholder="{{ 'Message' | _ }}*" onfocus="this.placeholder=''" onblur="this.placeholder='{{ 'Message' | _ }}*'">{{ post.message }}</textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="info-wrap">*{{ 'Fields marked with a star are required' | _ }}</div>
+    </div>
+    <div class="row">
+        {{ form_token() }}
+        <div class="submit-wrap"><input type="submit" form="{{ __SELF__ }}" value="{{ 'SEND' | _ }}"></div>
+    </div>
+    <div id="result" class="form-send-wrap">
+        <div class="error-wrap" id="error">
+            {% if error %}
+                {{ error }}
+            {% endif %}
+        </div>
+
+        {% flash %}
+            {{ message }}
+        {% endflash %}
+    </div>
+</form>

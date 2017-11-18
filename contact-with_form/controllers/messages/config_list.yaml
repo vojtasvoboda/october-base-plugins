@@ -1,0 +1,43 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+# Model List Column configuration
+list: ~/plugins/site/contact/models/message/columns.yaml
+
+# Model Class name
+modelClass: Site\Contact\Models\Message
+
+# List Title
+title: Manage messages
+
+# Link URL for each record
+# recordUrl: site/contact/messages/update/:id
+
+# Message to display if the list is empty
+noRecordsMessage: backend::lang.list.no_records
+
+# Records to display per page
+recordsPerPage: 30
+
+# Displays the list column set up button
+showSetup: true
+
+# Displays the sorting link on each column
+showSorting: true
+
+# Set default sort column
+defaultSort:
+    column: id
+    direction: desc
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: list_toolbar
+    search:
+        prompt: Search
+
+# Search widget configuration
+    search:
+        prompt: backend::lang.list.search_prompt
