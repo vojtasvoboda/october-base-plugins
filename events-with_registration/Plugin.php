@@ -40,4 +40,11 @@ class Plugin extends PluginBase
             ],
         ];
     }
+
+    public function registerMailTemplates()
+    {
+        return [
+            'site.events::mail.registration' => 'Registration confirmation',
+        ];
+    }
 }

@@ -6,6 +6,7 @@ use October\Rain\Database\Traits\SoftDelete as SoftDeleteTrait;
 use October\Rain\Database\Traits\Validation as ValidationTrait;
 use October\Rain\Exception\ValidationException;
 use Request;
+use Site\Events\Mailers\RegistrationMailer;
 
 /**
  * Registration Model
@@ -83,6 +84,14 @@ class Registration extends Model
                 throw new ValidationException(['event' => 'Registration already exists for this email.']);
             }
         }
+    }
+
+    /**
+     * Send confirmation email after registration.
+     */
+    public function afterCreate()
+    {
+        RegistrationMailer::send($this);
     }
 
     /**
