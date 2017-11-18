@@ -1,21 +1,29 @@
 -
-    name: Event 01
-    date_from: 2017-11-01
-    date_to: 2017-11-02
+    name: Old event
+    date_from: "-2 weeks"
+    date_to: "-1 weeks"
     description: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
 -
-    name: Event 02
-    date_from: 2017-11-16
-    date_to: 2017-11-20
+    name: Old one day event
+    date_from: "-1 weeks"
     description: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
 -
-    name: Event 03 Top
-    date_from: 2017-11-20
-    date_to: 2017-11-22
+    name: Ongoing event
+    date_from: "-2 days"
+    date_to: "2 days"
+    description: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+-
+    name: Ongoing one day event
+    date_from: "today"
+    date_to: "today"
+    description: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+-
+    name: Future one day event
+    date_from: "2 weeks"
     description: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
     top: true
 -
-    name: Event 04
-    date_from: 2017-11-24
-    date_to: 2017-11-30
+    name: Future event
+    date_from: "4 weeks"
+    date_to: "5 weeks"
     description: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
