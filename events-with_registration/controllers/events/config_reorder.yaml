@@ -1,0 +1,5 @@
+title: Events
+modelClass: Site\Events\Models\Event
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar

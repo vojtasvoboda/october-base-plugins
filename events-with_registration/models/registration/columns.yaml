@@ -1,0 +1,34 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    event:
+        label: Event
+        relation: event
+        select: name
+    name:
+        label: Name
+        searchable: true
+        sortable: true
+    surname:
+        label: Surname
+        searchable: true
+        sortable: true
+    company:
+        label: Company
+        searchable: true
+        sortable: true
+    email:
+        label: Email
+        searchable: true
+        sortable: true
+    phone:
+        label: Phone
+        searchable: true
+        sortable: true
+    created_at:
+        label: Created
+        type: datetime
+        sortable: true
+        format: d.m.Y H:i:s

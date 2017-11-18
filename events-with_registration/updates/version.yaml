@@ -1,0 +1,7 @@
+1.0.0:
+    - First version of Events
+    - create_events_table.php
+    - seed_events_table.php
+1.0.1:
+    - Add registrations
+    - create_registrations_table.php

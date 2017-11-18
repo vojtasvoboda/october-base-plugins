@@ -1,0 +1,6 @@
+plugin:
+    name: 'Events'
+    description: 'Events management'
+    author: 'Vojta Svoboda'
+    icon: icon-calendar-o
+    homepage: ''

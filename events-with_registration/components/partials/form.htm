@@ -1,0 +1,67 @@
+{% set event = __SELF__.event %}
+
+<script type="text/javascript">
+    var modal = $('#remodal').remodal();
+    modal.open();
+</script>
+
+<div id="remodal">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <div class="popup-form">
+        <div class="date">
+            {% if event.date_to and (event.date_from != event.date_to) %}
+                {{ event.date_from | date('d. m.') }} - {{ event.date_to | date('d. m. Y') }}
+            {% else %}
+                {{ event.date_from | date('d. m. Y') }}
+            {% endif %}
+        </div>
+        <div class="text">
+            Reservation on event: {{ event.name }}
+        </div>
+        <form
+            method="post"
+            data-request="onRegistrate"
+            data-request-update="'@success': '.remodal-is-opened #message'"
+            data-request-error="$('.remodal-is-opened #message').text(jqXHR.responseJSON.result);">
+            <div class="row">
+                <div class="item">
+                    <label>Name<span class="star">*</span>:</label>
+                    <input type="text" name="name" value="" />
+                </div>
+                <div class="item">
+                    <label>Surname<span class="star">*</span>:</label>
+                    <input type="text" name="surname" value="" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <label>Company:</label>
+                    <input type="text" name="company" value="" />
+                </div>
+                <div class="item">
+                    <label>Email<span class="star">*</span>:</label>
+                    <input type="text" name="email" value="" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <label>Phone:</label>
+                    <input type="text" name="phone" value="" />
+                </div>
+                <div class="item">
+                    {{ form_token() }}
+                    <input type="hidden" name="slug" value="{{ event.slug }}" />
+                    <button type="submit" value="Odeslat">Odeslat</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item info">
+                    <span class="star">*</span> Required fields
+                </div>
+                <div class="item message">
+                    <span class="error" id="message"></span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

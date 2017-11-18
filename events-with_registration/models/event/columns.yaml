@@ -1,0 +1,46 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: Name
+        searchable: true
+        sortable: true
+    description:
+        label: Description
+        searchable: true
+        sortable: true
+        select: CONCAT(SUBSTRING(`description`, 4, 99),'...')
+    date_from:
+        label: From
+        type: date
+        format: d.m.Y
+        sortable: true
+    date_to:
+        label: To
+        type: date
+        format: d.m.Y
+        sortable: true
+    top:
+        label: TOP
+        type: switch
+        sortable: true
+    enabled:
+        label: Enabled
+        type: switch
+        sortable: true
+    sort_order:
+        label: Sort order
+        type: text
+        sortable: true
+    created_at:
+        label: Created
+        type: datetime
+        sortable: true
+        format: d.m.Y H:i:s
+    updated_at:
+        label: Updated
+        type: datetime
+        sortable: true
+        format: d.m.Y H:i:s

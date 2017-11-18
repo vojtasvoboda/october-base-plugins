@@ -1,0 +1,31 @@
+{% set events = __SELF__.events %}
+
+{% for event in events %}
+<div class="item" data-id="{{ event.slug }}">
+
+    <h3>
+        {% if event.date_to and (event.date_from != event.date_to) %}
+            {{ event.date_from | date('d. m.') }} - {{ event.date_to | date('d. m. Y') }}
+        {% else %}
+            {{ event.date_from | date('d. m. Y') }}
+        {% endif %}
+    </h3>
+
+    <div id="{{ event.slug }}-form"></div>
+
+    <div class="text">
+        {{ event.description | raw }}
+        {% if not event.ongoing() %}
+        <a
+            href="#"
+            class="form-link"
+            data-request="{{ __SELF__ }}::onShow"
+            data-request-data="id: '{{ event.slug }}'"
+            data-request-update="'@form': '#{{ event.slug }}-form'">
+            Registrate&hellip;
+        </a>
+        {% endif %}
+    </div>
+
+</div>
+{% endfor %}

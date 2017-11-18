@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Registration
+
+# Model Form Field configuration
+form: $/site/events/models/registration/fields.yaml
+
+# Model Class name
+modelClass: Site\Events\Models\Registration
+
+# Default redirect location
+defaultRedirect: site/events/registrations
+
+# Create page
+create:
+    title: Create Registration
+    redirect: site/events/registrations/update/:id
+    redirectClose: site/events/registrations
+
+# Update page
+update:
+    title: Edit Registration
+    redirect: site/events/registrations
+    redirectClose: site/events/registrations
+
+# Preview page
+preview:
+    title: Preview Registration
