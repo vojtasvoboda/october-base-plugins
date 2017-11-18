@@ -47,11 +47,15 @@ class Event extends Model
             ->where(function ($query) {
                 $now = Argon::now();
                 $query
-                    ->where('date_from', '>=', $now->toDateString())
-                    ->orWhere(function ($query) use ($now) {
+                    ->where(function ($query) use ($now) {
                         $query
                             ->whereNull('date_to')
-                            ->orWhere('date_to', '>=', $now->toDateString());
+                            ->where('date_from', '>=', $now->toDateString());
+                    })
+                    ->orWhere(function ($query) use ($now) {
+                        $query
+                            ->whereNotNull('date_to')
+                            ->where('date_to', '>=', $now->toDateString());
                     });
             });
     }
@@ -62,11 +66,15 @@ class Event extends Model
             ->where(function ($query) {
                 $now = Argon::now();
                 $query
-                    ->where('date_from', '<', $now->toDateString())
-                    ->orWhere(function ($query) use ($now) {
+                    ->where(function ($query) use ($now) {
                         $query
                             ->whereNull('date_to')
-                            ->orWhere('date_to', '<', $now->toDateString());
+                            ->where('date_from', '<', $now->toDateString());
+                    })
+                    ->orWhere(function ($query) use ($now) {
+                        $query
+                            ->whereNotNull('date_to')
+                            ->where('date_to', '<', $now->toDateString());
                     });
             });
     }
@@ -78,7 +86,7 @@ class Event extends Model
 
     public function ongoing()
     {
-        $now = Argon::now();
+        $now = Argon::now()->hour(0)->minute(0)->second(0);
 
         if ($this->date_to === null) {
             return $this->date_from->format('Y-m-d') === $now->format('Y-m-d');
@@ -89,12 +97,12 @@ class Event extends Model
 
     public function past()
     {
-        $now = Argon::now();
+        $now = Argon::now()->hour(0)->minute(0)->second(0);
 
         if ($this->date_to === null) {
             return $this->date_from->format('Y-m-d') < $now->format('Y-m-d');
         }
 
-        return $this->date_to <= $now;
+        return $this->date_to < $now;
     }
 }
