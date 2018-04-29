@@ -1,0 +1,38 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: Name
+        searchable: true
+        sortable: true
+    position:
+        label: Position
+        searchable: true
+        sortable: true
+    linkedin:
+        label: LinkedIn
+        searchable: true
+        sortable: true
+    mail:
+        label: Mail
+        searchable: true
+        sortable: true
+    sort_order:
+        label: Sort order
+        sortable: true
+    enabled:
+        label: Enabled
+        type: switch
+        sortable: true
+    created_at:
+        label: Created
+        type: datetime
+        sortable: true
+        format: d.m.Y H:i:s
+    updated_at:
+        label: Updated
+        type: datetime
+        sortable: true
+        format: d.m.Y H:i:s

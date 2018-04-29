@@ -1,0 +1,4 @@
+1.0.0:
+  - First version of Team
+  - create_members_table.php
+  - seed_members_table.php

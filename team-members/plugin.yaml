@@ -1,0 +1,6 @@
+plugin:
+    name: 'Team'
+    description: 'Team management'
+    author: 'Vojta Svoboda'
+    icon: icon-users
+    homepage: ''

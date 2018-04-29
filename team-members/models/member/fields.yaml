@@ -1,0 +1,34 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        required: true
+        span: left
+    position:
+        label: Position
+        span: right
+    linkedin:
+        label: LinkedIn
+        span: left
+    mail:
+        label: Mail
+        span: right
+    enabled:
+        label: Enabled
+        type: checkbox
+        default: true
+    image:
+        label: Image
+        mode: image
+        imageWidth: 300
+        imageHeight: 300
+        useCaption: true
+        thumbOptions:
+            mode: auto
+            extension: auto
+        required: 1
+        type: fileupload
+        commentAbove: 'Photo dimensions will be updated automatically'

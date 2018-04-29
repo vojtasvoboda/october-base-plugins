@@ -1,0 +1,5 @@
+title: Member sort order
+modelClass: Site\Team\Models\Member
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar

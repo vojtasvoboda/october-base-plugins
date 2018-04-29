@@ -15,3 +15,6 @@ Collection of base plugins for OctoberCMS.
 
 - In one category - partner logos, each partner in one category.
 
+## Team members
+
+- Manage team members with names, positions, mails and photos.

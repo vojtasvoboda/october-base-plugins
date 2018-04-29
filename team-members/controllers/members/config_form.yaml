@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Member
+
+# Model Form Field configuration
+form: $/site/team/models/member/fields.yaml
+
+# Model Class name
+modelClass: Site\Team\Models\Member
+
+# Default redirect location
+defaultRedirect: site/team/members
+
+# Create page
+create:
+    title: Create Member
+    redirect: site/team/members/update/:id
+    redirectClose: site/team/members
+
+# Update page
+update:
+    title: Edit Member
+    redirect: site/team/members
+    redirectClose: site/team/members
+
+# Preview page
+preview:
+    title: Preview Member
