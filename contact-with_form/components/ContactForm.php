@@ -86,7 +86,7 @@ class ContactForm extends ComponentBase
         if (Session::token() !== Input::get('_token')) {
             throw new ApplicationException(Lang::get('site.contact::lang.token'));
         }
-        if (strtolower(Input::get('confirm')) !== 'kraus') {
+        if (strtolower(Input::get('confirm')) !== 'secret') {
             throw new ApplicationException(Lang::get('site.contact::lang.confirm'));
         }
     }

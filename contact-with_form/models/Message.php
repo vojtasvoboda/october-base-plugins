@@ -4,7 +4,7 @@ use App;
 use Carbon\Carbon;
 use Config;
 use Model;
-use October\Rain\Database\Traits\SoftDeleting as SoftDeletingTrait;
+use October\Rain\Database\Traits\SoftDelete as SoftDeletingTrait;
 use October\Rain\Database\Traits\Validation as ValidationTrait;
 use Request;
 
@@ -36,6 +36,14 @@ class Message extends Model
         'phone.required' => 'site.contact::lang.phone.required',
         'message.required' => 'site.contact::lang.message.required',
         'message.min' => 'site.contact::lang.message.min',
+    ];
+
+    public $attributeNames = [
+        'name' => 'site.contact::lang.name.label',
+        'email' => 'site.contact::lang.email.label',
+        'phone' => 'site.contact::lang.phone.label',
+        'company' => 'site.contact::lang.company.label',
+        'message' => 'site.contact::lang.message.label',
     ];
 
     /** @var array Values are fields accessible to mass assignment. */
