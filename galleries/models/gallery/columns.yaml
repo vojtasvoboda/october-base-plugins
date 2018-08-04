@@ -1,0 +1,26 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: Name
+        type: text
+        searchable: true
+        sortable: true
+    sort_order:
+        label: Sort order
+        type: text
+        sortable: true
+    enabled:
+        label: Enabled
+        type: switch
+        sortable: true
+    created_at:
+        label: Created
+        type: timetense
+        sortable: true
+    updated_at:
+        label: Updated
+        type: timetense
+        sortable: true

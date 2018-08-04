@@ -11,6 +11,10 @@ Collection of base plugins for OctoberCMS.
 - Without any category - events, date from, date to.
 - With registration form - saving registrations to the events.
 
+## Galleries
+
+- Just basic galleries management
+
 ## Partners
 
 - In one category - partner logos, each partner in one category.

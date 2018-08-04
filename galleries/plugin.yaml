@@ -1,0 +1,6 @@
+plugin:
+    name: 'Galleries'
+    description: 'Galleries management'
+    author: 'Vojta Svoboda'
+    icon: oc-icon-picture-o
+    homepage: ''

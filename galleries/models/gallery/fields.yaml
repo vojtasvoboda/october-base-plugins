@@ -1,0 +1,34 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        span: left
+        required: 1
+        type: text
+    url:
+        label: Gallery slug
+        span: right
+        required: 1
+        preset:
+            field: name
+            type: slug
+        type: text
+    enabled:
+        label: Enabled
+        span: full
+        type: checkbox
+        default: true
+    images:
+        label: Images
+        span: full
+        mode: image
+        imageHeight: 150
+        imageWidth: 250
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        type: fileupload
