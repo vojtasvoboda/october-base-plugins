@@ -1,0 +1,4 @@
+1.0.1:
+    - First version of References
+    - create_references_table.php
+    - seed_references_table.php

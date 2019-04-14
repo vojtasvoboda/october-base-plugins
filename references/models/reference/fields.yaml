@@ -1,0 +1,66 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        required: true
+        span: left
+    slug:
+        label: Slug
+        span: right
+        required: true
+        preset:
+            field: name
+            type: slug
+tabs:
+    fields:
+        client:
+            tab: Basic
+            label: Client
+            span: left
+        location:
+            tab: Basic
+            label: Location
+            span: right
+        enabled:
+            tab: Basic
+            label: Enabled
+            type: checkbox
+            default: true
+        top:
+            tab: Basic
+            label: Top
+            type: checkbox
+            default: true
+        text:
+            tab: Basic
+            label: Content
+            type: richeditor
+        cover:
+            tab: Cover
+            label: Cover
+            mode: image
+            imageWidth: 300
+            imageHeight: 300
+            useCaption: true
+            thumbOptions:
+                mode: auto
+                extension: auto
+            required: 1
+            type: fileupload
+            commentAbove: 'Photo dimensions will be updated automatically'
+        images:
+            tab: Gallery
+            label: Images
+            mode: image
+            imageWidth: 300
+            imageHeight: 300
+            useCaption: true
+            thumbOptions:
+                mode: auto
+                extension: auto
+            required: 1
+            type: fileupload
+            commentAbove: 'Photo dimensions will be updated automatically'

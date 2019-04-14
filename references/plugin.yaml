@@ -1,0 +1,6 @@
+plugin:
+    name: 'References'
+    description: 'References management'
+    author: 'Vojta Svoboda'
+    icon: icon-briefcase
+    homepage: ''

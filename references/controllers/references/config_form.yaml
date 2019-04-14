@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Reference
+
+# Model Form Field configuration
+form: $/site/references/models/reference/fields.yaml
+
+# Model Class name
+modelClass: Site\References\Models\Reference
+
+# Default redirect location
+defaultRedirect: site/references/references
+
+# Create page
+create:
+    title: Create Reference
+    redirect: site/references/references/update/:id
+    redirectClose: site/references/references
+
+# Update page
+update:
+    title: Edit Reference
+    redirect: site/references/references
+    redirectClose: site/references/references
+
+# Preview page
+preview:
+    title: Preview Reference

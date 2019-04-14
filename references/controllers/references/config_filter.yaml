@@ -1,0 +1,17 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+    top:
+        label: Top
+        type: switch
+        conditions:
+            - top <> '1'
+            - top = '1'
+    enabled:
+        label: Enabled
+        type: switch
+        conditions:
+            - enabled <> '1'
+            - enabled = '1'
