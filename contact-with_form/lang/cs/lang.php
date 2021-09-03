@@ -2,11 +2,11 @@
 
 return [
     'name' => [
-    	'label' => 'Jméno a příjmení',
+        'label' => 'Jméno a příjmení',
         'required' => 'Musíte vyplnit Vaše jméno a příjmení.',
     ],
     'email' => [
-    	'label' => 'E-mail',
+        'label' => 'E-mail',
         'required' => 'Napište nám prosím i Váš e-mail.',
     ],
     'phone' => [
@@ -17,7 +17,7 @@ return [
         'label' => 'Společnost',
     ],
     'message' => [
-    	'label' => 'Zpráva',
+        'label' => 'Zpráva',
         'required' => 'Text zprávy musí mít alespoň 5 znaků.',
         'min' => 'Text zprávy musí mít alespoň 5 znaků.',
     ],

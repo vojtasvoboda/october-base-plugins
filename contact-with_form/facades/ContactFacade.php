@@ -7,8 +7,6 @@ use Site\Contact\Mailers\MessageMailer;
 use Site\Contact\Models\Message;
 
 /**
- * Facade ContactFacades.
- *
  * @package Site\Contact\Facades
  */
 class ContactFacade
@@ -17,8 +15,6 @@ class ContactFacade
     private $message;
 
     /**
-     * ContactFacade constructor.
-     *
      * @param Message $message
      */
     public function __construct(Message $message)
@@ -30,9 +26,7 @@ class ContactFacade
      * Save message and send confirmation email.
      *
      * @param array $data
-     *
      * @return Message|null
-     *
      * @throws ApplicationException
      */
     public function storeMessage($data)

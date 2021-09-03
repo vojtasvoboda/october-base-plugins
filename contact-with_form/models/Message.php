@@ -58,7 +58,7 @@ class Message extends Model
     {
         $this->locale = App::getLocale();
         $this->referrer = Request::path();
-        $this->ip = Request::server('REMOTE_ADDR');
+        $this->ip_addr = Request::server('REMOTE_ADDR');
         $this->ip_forwarded = Request::server('HTTP_X_FORWARDED_FOR');
         $this->user_agent = Request::server('HTTP_USER_AGENT');
     }
@@ -76,7 +76,7 @@ class Message extends Model
         $ip_forwarded = Request::server('HTTP_X_FORWARDED_FOR');
         $user_agent = Request::server('HTTP_USER_AGENT');
 
-        return $query->whereIp($ip_addr)->whereIpForwarded($ip_forwarded)->whereUserAgent($user_agent);
+        return $query->whereIpAddr($ip_addr)->whereIpForwarded($ip_forwarded)->whereUserAgent($user_agent);
     }
 
     /**

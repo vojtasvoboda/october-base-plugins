@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'recipients' => [
         'to' => [
             'name' => 'Name Surname',

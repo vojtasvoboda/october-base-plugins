@@ -19,7 +19,7 @@ class CreateMessagesTable extends Migration
             $table->text('message')->nullable();
             $table->string('referrer', 600)->nullable();
             $table->string('locale', 300)->nullable();
-            $table->string('ip', 300)->nullable();
+            $table->string('ip_addr', 300)->nullable();
             $table->string('ip_forwarded', 300)->nullable();
             $table->string('user_agent', 300)->nullable();
             $table->timestamps();
